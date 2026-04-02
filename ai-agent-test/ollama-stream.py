@@ -10,4 +10,5 @@ if __name__ == "__main__":
     response = llm.stream(messages)
 
     for chunk in response:
+        # 打印每个 chunk 的内容 ，并实时刷新 输出 end="" 表示不换行，flush=True 表示实时刷新
         print(chunk.content, end="", flush=True)
