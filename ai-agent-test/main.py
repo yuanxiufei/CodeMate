@@ -1,6 +1,6 @@
-def main():
-    print("Hello from ai-agent-test!")
+from langchain_ollama.chat_models import ChatOllama
 
 
 if __name__ == "__main__":
-    main()
+    model = ChatOllama(model="my-doctor:0.2")
+    print(model.invoke("Hello"))
