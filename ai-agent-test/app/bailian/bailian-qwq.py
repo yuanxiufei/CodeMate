@@ -1,3 +1,10 @@
+"""DashScope（阿里云百炼）OpenAI Compatible API：带“思考/回复”分段的流式示例。
+
+要点：
+- qwq-plus 可能会在流式 delta 中同时给出 reasoning_content（思考）与 content（最终回复）
+- 该示例把两部分分别打印，便于观察模型的输出结构
+"""
+
 from openai import OpenAI
 import os
 client = OpenAI(
